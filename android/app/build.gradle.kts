@@ -28,14 +28,7 @@ apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
 android {
     compileSdkVersion 33
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-        coreLibraryDesugaringEnabled true
-    }
-    
     defaultConfig {
-        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id)
         applicationId "com.example.liedar"
         minSdkVersion 21
         targetSdkVersion 33
@@ -43,22 +36,20 @@ android {
         versionName flutterVersionName
         multiDexEnabled true
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+        coreLibraryDesugaringEnabled true
+    }
+
     buildTypes {
         release {
-            // TODO: Add your own signing config for the release build.
             // signingConfig signingConfigs.release
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-    }
-    // Enable multidex for larger app method count (optional)
-    // necessary for some plugins
-    compileOptions {
-        incremental true
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-        coreLibraryDesugaringEnabled true
     }
 }
 
