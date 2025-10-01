@@ -29,7 +29,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.example.liedar"
+        applicationId "com.company.liedar" // Use your actual package ID here
         minSdkVersion 21
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
@@ -45,10 +45,10 @@ android {
 
     buildTypes {
         release {
-            // signingConfig signingConfigs.release
             minifyEnabled false
             shrinkResources false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // signingConfig signingConfigs.release // Uncomment and configure if you have signing setup
         }
     }
 }
