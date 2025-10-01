@@ -29,7 +29,7 @@ android {
     compileSdkVersion 33
 
     defaultConfig {
-        applicationId "com.company.liedar" // Use your actual package ID here
+        applicationId "com.company.lieDar" // Use your actual package ID here
         minSdkVersion 21
         targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
