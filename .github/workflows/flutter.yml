@@ -10,12 +10,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-          - name: Set up Flutter
-      uses: subosito/flutter-action@v2
-      with:
-        flutter-version: '3.13.0'  # or latest stable version
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.13.0'   # put only the version here
 
       - name: Install dependencies
         run: flutter pub get
+
       - name: Build APK
         run: flutter build apk --release
